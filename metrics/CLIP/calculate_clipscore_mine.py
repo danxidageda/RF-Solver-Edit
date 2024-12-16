@@ -1,5 +1,5 @@
 import torch
-import clip
+from clip import clip
 from PIL import Image
 import os
 
@@ -9,7 +9,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 model, preprocess = clip.load('ViT-B/32', device=device)
 
 # 替换为实际存放图片的文件夹路径
-image_folder_path = "/home/lyw/project/ReNoise-Inversion/rf-solver_ablation_result/new_output_for_edit_clip/output_3_solver_edit_3_20_3_v_injection"
+image_folder_path = "/home/lyw/project/RF-Solver-Edit/src/ablation/rf-solver_ablation_result/new_output_for_edit_clip/output_1_solver_edit_3_20_3_k_injection"
 
 count = 0
 score = 0
